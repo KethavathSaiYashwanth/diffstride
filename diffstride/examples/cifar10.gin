@@ -14,7 +14,7 @@ train.train:
   load_data_fn = @data.load_datasets
   model_cls = @resnet.resnet18
   optimizer_cls = @tf.keras.optimizers.SGD
-  num_epochs = 1
+  num_epochs = 400
 
 tf.keras.optimizers.SGD:
   learning_rate = @tf.keras.optimizers.schedules.PiecewiseConstantDecay()
