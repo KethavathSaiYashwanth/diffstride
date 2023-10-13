@@ -6,9 +6,10 @@ import diffstride.resnet as resnet
 import diffstride.pooling as pooling
 
 data.load_datasets:
-  name = 'cifar10'
-  batch_size = 128
-  mixup_alpha = 0.2
+  name = 'cifar100'
+
+resnet.Resnet:
+  pooling_cls = @pooling.FixedSpectralPooling
 
 train.train:
   load_data_fn = @data.load_datasets
